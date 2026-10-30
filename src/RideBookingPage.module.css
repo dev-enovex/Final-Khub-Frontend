@@ -1,0 +1,386 @@
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f8faf9 !important;
+  color: #19382f;
+  padding: 42px clamp(20px, 3.2vw, 42px) 36px;
+  font-size: 13px;
+  line-height: 1.55;
+  box-sizing: border-box;
+}
+
+.page * {
+  box-sizing: border-box;
+}
+
+.heading {
+  margin: 0 0 23px;
+}
+
+.heading h1 {
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.18;
+  letter-spacing: -0.8px;
+  margin: 0 0 23px;
+  font-weight: 750;
+  color: #153a30;
+}
+
+.heading p {
+  margin: 2px 0;
+  color: #7d9389;
+  font-weight: 550;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.18fr) minmax(285px, 0.92fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.leftColumn,
+.rightColumn {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mapCard {
+  height: 321px;
+  position: relative;
+  overflow: hidden;
+  background: #e5eae3;
+  border-radius: 9px;
+  color: #153e32;
+  padding: 22px 48px;
+}
+
+.mapCard:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  background: #c4ddd0;
+}
+
+.mapTop {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.mapTop span {
+  position: absolute;
+  left: 45%;
+  top: 47px;
+  color: #72867c;
+}
+
+.route {
+  position: absolute;
+  inset: 16px 28px 14px;
+  width: calc(85% - 56px);
+  height: calc(100% - 30px);
+}
+
+.mapDestination {
+  position: absolute;
+  z-index: 1;
+  left: 38%;
+  bottom: 62px;
+  font-size: 11px;
+}
+
+.caption {
+  margin: -8px 0 0;
+  color: #7d9389;
+  font-size: 12px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #dbe4dc;
+  border-radius: 9px;
+  padding: 19px 20px;
+  color: #263d35;
+}
+
+.card h2 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  color: #1c342c;
+  font-weight: 700;
+}
+
+.card h3 {
+  font-size: 17px;
+  margin: 11px 0;
+  color: #1c342c;
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+.arrival {
+  padding: 20px;
+}
+
+.arrival h2 {
+  margin-bottom: 12px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #193c31;
+  flex: none;
+}
+
+.routeSummary {
+  margin-top: 17px !important;
+}
+
+.safety,
+.tip {
+  border-radius: 5px;
+  background: #e6f1e9;
+  color: #1a4b3e;
+  padding: 14px;
+}
+
+.safety p,
+.tip p {
+  margin: 0 0 17px;
+  font-size: 12px;
+}
+
+.link {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #164b3d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rightColumn {
+  gap: 16px;
+}
+
+.driver {
+  padding: 19px 20px;
+}
+
+.driverRow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 14px 0;
+}
+
+.driverRow h3 {
+  margin: 0 0 5px;
+}
+
+.driverRow p {
+  margin: 0;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e6f1e9;
+  color: #164333;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 13px 0;
+}
+
+.primary {
+  border: 0;
+  border-radius: 7px;
+  background: #104536;
+  color: white;
+  min-height: 40px;
+  padding: 0 17px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary:hover {
+  background: #0a382b;
+}
+
+.small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.timeline {
+  padding: 19px 20px;
+}
+
+.event {
+  margin: 0 0 17px;
+}
+
+.event:last-child {
+  margin-bottom: 0;
+}
+
+.event p {
+  margin: 0 0 2px;
+}
+
+.event span {
+  display: block;
+}
+
+.help {
+  padding: 19px 20px;
+}
+
+.full {
+  width: 100%;
+  margin: 0 0 15px;
+}
+
+.help > .link {
+  margin: 9px 0 14px;
+}
+
+.help p {
+  margin-bottom: 0;
+}
+
+.tip {
+  padding: 14px;
+}
+
+.tip .link {
+  margin-top: 2px;
+}
+
+.notice {
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(620px, calc(100vw - 32px));
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: #fff;
+  color: #19382f;
+  border: 1px solid #dbe4dc;
+  border-radius: 8px;
+  padding: 13px 16px;
+  box-shadow: 0 10px 30px #0005;
+}
+
+.notice button {
+  border: 0;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.back {
+  margin-top: 22px;
+  border: 0;
+  background: none;
+  color: #8ba196;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.spin {
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 28px 16px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mapCard {
+    height: 260px;
+    padding: 20px 24px;
+  }
+
+  .mapDestination {
+    left: 35%;
+    bottom: 48px;
+  }
+
+  .rightColumn {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .heading h1 {
+    font-size: 29px;
+  }
+
+  .route {
+    width: calc(85% - 25px);
+    left: 10px;
+  }
+}
+
+@media (min-width: 801px) {
+  .back {
+    display: block;
+  }
+}
